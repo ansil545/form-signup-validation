@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="validation.css" />
+    <title>form-validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="content">
+        <div>
+          <label class="head">
+            <input
+              type="text"
+              placeholder="name"
+              id="input-name"
+              onkeyup="validatename()"
+              
+            />
+            <span id="error-name"></span>
+            <span class="error-num"></span>
+          </label>
+        </div>
+
+        <div>
+          <label class="head">
+            <input
+              type="number"
+              placeholder="number"
+              id="input-number"
+              onkeyup="validatenumber()"
+            />
+            <span id="error-number"></span>
+          </label>
+        </div>
+        <div>
+          <label class="head">
+            <input
+              type="email"
+              placeholder="email"
+              id="input-email"
+              onkeyup="validateEmail()"
+            />
+            <span id="error-email"></span>
+          </label>
+        </div>
+        <div>
+          <label class="head">
+            <input
+              type="password"
+              placeholder="password"
+              min="6"
+              maxlength="10"
+              id="input-password"
+              onkeyup="validatepassword()"
+            />
+
+            <span id="error-password"></span>
+          </label>
+        </div>
+
+        <div class="submit">
+          <input
+            type="submit"
+            placeholder="submit"
+            id="submit-button"
+            onclick="validatesubmit()"
+          />
+        </div>
+        <span id="error-submit"></span>
+      </div>
+
+    </div>
+
+    <script src="validation.js"></script>
+  </body>
+</html>
